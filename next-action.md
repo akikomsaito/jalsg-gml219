@@ -9,7 +9,7 @@
 ## 直近
 
 - [ ] `docs/ash2026-abstract-review.md` をGoogleドライブ「JALSG-GML219」フォルダへアップロード（Claude経由は権限不足で失敗。オーナー cutie.akiko@gmail.com 側で編集者権限を付与するか、手動アップロードが必要。[issues.md](issues.md)参照）
-- [ ] ASH抄録の修正提案を伊藤先生へ送付し、30日死亡率の定義・Grade 3以上AEの集計範囲・GML200の実数値を照会（メール案は`TMF/20260802 ASH抄録レビュー/20260802_伊藤先生への返信メール案.md`に作成済み。送信前に本人確認が必要）
+- [ ] ASH抄録の修正提案メールを伊藤先生へ送付する（`TMF/20260802 ASH抄録レビュー/`に本文・別紙あり。同ファイルの「送信前の未確定事項」5点——著者所属のClinical Research Center有無、誤字1件、記号の不統一、GML200のpercentage points指摘の要否、主要10AE版数値の扱い——を解消してから送る）
 - [ ] 抄録の著者情報修正（Akiko M. Saito ／ Clinical Research Center, NHO Nagoya Medical Center、所属番号の新規割り当て）が投稿システム上で反映されたか確認
 - [ ] 伊藤先生への回答メール送付を確認（Gmail下書きの実送信はユーザー側操作のため未確認）
 - [ ] CGA7の別視点解析（先生に関心の視点を確認）
