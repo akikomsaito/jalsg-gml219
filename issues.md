@@ -1,6 +1,6 @@
 # JALSG-GML219 — 既知の問題・制約
 
-随時更新（2026-07-05 時点）
+随時更新（2026-08-02 時点）
 
 次アクションは [next-action.md](next-action.md) を参照。
 
@@ -27,6 +27,18 @@
 ## Claude連携のBoxアップロードツールが共同作業者設定フォルダで使えない
 
 2026-07-05、更新したプログラム3本を Box `program`フォルダ（[JALSG-GML219配下](https://nmccrc.app.box.com/folder/354039003645)）へ反映しようとしたところ、`upload_file_version`が「The upload operation was blocked because the file is externally accessible.」で拒否された。原因は当該フォルダに共同作業者（`hasCollaborations: true`）が設定されていること。この安全ガードはClaude連携のBox書き込み系ツール（`upload_file`/`upload_file_version`等）に組み込まれており、共同作業者が1人でも設定されたフォルダ・ファイルへは書き込み不可（読み取り系ツールは問題なく動作する）。JALSG-GML219のBoxフォルダは試験関係者との共有が前提のため、実質的にこのツール経由でのアップロードは使えない。今回はユーザーが手動アップロードで対応した。回避方法（ローカルBox Drive同期パスの利用等）は次回までに調査予定。
+
+## Googleドライブ共有フォルダへの書き込み権限がない
+
+2026-08-02、ASH抄録レビュー結果（`docs/ash2026-abstract-review.md`）を指定のGoogleドライブフォルダ（`1yUGHDQ68XRrfFihBr0QWvjfHKV-bVi5W`、フォルダ名 JALSG-GML219）へアップロードしようとしたところ、`User cannot add children to the specified folder.` で拒否された。当該フォルダの権限は「anyone: reader（リンクを知る全員が閲覧可）」と「cutie.akiko@gmail.com: owner」の2件のみで、Claude連携のMCPが接続しているアカウントには編集権限が無い。読み取り系は動作する。解消するには、オーナー（cutie.akiko@gmail.com）側でMCP接続アカウントに編集者権限を付与するか、当該アカウントでMCPを接続し直す必要がある。Box側の書き込み制限（下記）とは原因が別で、こちらは純粋な共有設定の問題。
+
+## ASH 2026抄録の未解決事項
+
+抄録案の照合で、当方データだけでは確定できない事項が残っている（詳細は[`docs/ash2026-abstract-review.md`](docs/ash2026-abstract-review.md)）。
+
+- **30日死亡率の定義**：抄録は1.65%（2/121）だが、当方集計では寛解導入1開始日から30日以内の死亡は1例（0.8%）。35日以内なら2例と一致する。起算日と期間の定義について伊藤先生の確認待ち。
+- **Grade 3以上有害事象の集計範囲**：現行の数値はCRF収集33項目のうち主要10項目に限定した集計。抄録の表記（"Grade ≥3 AE"）を限定付きに改めるか、全33項目の集計に差し替えるかはPI判断待ち。
+- **GML200との比較**：抄録が引用する「OS約20%改善・RFS約10%改善」は当方の解析範囲外で照合できていない。GML200側の実数値・対象年齢・出典の提示が必要。
 
 ## 未着手の解析候補（PIより要望あり）
 

@@ -2,9 +2,27 @@
 
 > このファイルはフォルダを開くと自動で表示されます。完了したら `[x]` に変更し、不要になったら削除してください。
 
-最終更新: 2026-07-05
+最終更新: 2026-08-02
 
 ---
+
+## 直近
+
+- [ ] `docs/ash2026-abstract-review.md` をGoogleドライブ「JALSG-GML219」フォルダへアップロード（Claude経由は権限不足で失敗。オーナー cutie.akiko@gmail.com 側で編集者権限を付与するか、手動アップロードが必要。[issues.md](issues.md)参照）
+- [ ] ASH抄録の修正提案を伊藤先生へ送付し、30日死亡率の定義・Grade 3以上AEの集計範囲・GML200の実数値を照会
+- [ ] 抄録の著者情報修正（Akiko M. Saito ／ Clinical Research Center, NHO Nagoya Medical Center、所属番号の新規割り当て）が投稿システム上で反映されたか確認
+- [ ] 伊藤先生への回答メール送付を確認（Gmail下書きの実送信はユーザー側操作のため未確認）
+- [ ] CGA7の別視点解析（先生に関心の視点を確認）
+- [ ] `runx1`変数がRUNX1点変異かRUNX1-RUNX1T1融合確認検査かをDM等に確認（[issues.md](issues.md)参照）
+- [ ] `cr1yn`変数を追加したデータセット版の再送要否を確認（7/5回答では見送り）
+- [ ] Claude連携のBoxアップロード制限（共同作業者設定フォルダへの書き込み拒否）の回避方法を調査（ユーザー確認中）
+
+## 完了（2026-08-02）
+
+- [x] ASH 2026応募抄録案（abs26-7274）をBoxから取得し、既提出データ・一次データ・PRT/SAP・jRCT公開情報と全数値照合
+- [x] 修正提案を`docs/ash2026-abstract-review.md`にまとめた（重大な齟齬3件、統計記載の精度6件、著者・所属4件、jRCT/CRB追記）
+- [x] jRCT（jRCTs041190088）とNHO名古屋医療センターCRB（CRB4180009、英文名 National Hospital Organization Review Board for Clinical Trials (Nagoya)）の情報を確認し、抄録への追記案を作成
+- [x] 作業ログ`docs/work-logs/20260802-work-log.md`を作成、llm-wikiに知見2件を追加
 
 ## 初回セットアップ
 
@@ -32,10 +50,3 @@
 - [x] 新旧ローカルフォルダ・Box・GitHubの構成整理、旧フォルダの削除
 - [x] SASプログラムの文字化け（AE24ラベル）修正
 
-## 直近
-
-- [ ] 伊藤先生への回答メール送付を確認（Gmail下書きの実送信はユーザー側操作のため未確認）
-- [ ] CGA7の別視点解析（先生に関心の視点を確認）
-- [ ] `runx1`変数がRUNX1点変異かRUNX1-RUNX1T1融合確認検査かをDM等に確認（[issues.md](issues.md)参照）
-- [ ] `cr1yn`変数を追加したデータセット版の再送要否を確認（7/5回答では見送り）
-- [ ] Claude連携のBoxアップロード制限（共同作業者設定フォルダへの書き込み拒否）の回避方法を調査（ユーザー確認中）
