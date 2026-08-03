@@ -2,12 +2,14 @@
 
 > このファイルはフォルダを開くと自動で表示されます。完了したら `[x]` に変更し、不要になったら削除してください。
 
-最終更新: 2026-08-02
+最終更新: 2026-08-03
 
 ---
 
 ## 直近
 
+- [ ] SAS環境で`program/JALSG-GML219_Inquiry05_FollowUp.sas`（追跡期間中央値、逆Kaplan-Meier法）を実行し、出力（`output\JALSG-GML219_Inquiry05_FollowUp.rtf`）の中央値・範囲がPython検証値（中央値3.64年/43.7か月、範囲0.02〜5.49年）と一致するか確認する
+- [ ] 確認後、逆Kaplan-Meier法による追跡期間中央値・範囲を研究代表医師への回答に反映する
 - [ ] `docs/ash2026-abstract-review.md` をGoogleドライブ「JALSG-GML219」フォルダへアップロード（Claude経由は権限不足で失敗。オーナー cutie.akiko@gmail.com 側で編集者権限を付与するか、手動アップロードが必要。[issues.md](issues.md)参照）
 - [ ] ASH抄録の修正提案メールを伊藤先生へ送付する（`TMF/20260802 ASH抄録レビュー/`に本文・別紙あり。同ファイルの「送信前の未確定事項」5点——著者所属のClinical Research Center有無、誤字1件、記号の不統一、GML200のpercentage points指摘の要否、主要10AE版数値の扱い——を解消してから送る）
 - [ ] 抄録の著者情報修正（Akiko M. Saito ／ Clinical Research Center, NHO Nagoya Medical Center、所属番号の新規割り当て）が投稿システム上で反映されたか確認
@@ -16,6 +18,13 @@
 - [ ] `runx1`変数がRUNX1点変異かRUNX1-RUNX1T1融合確認検査かをDM等に確認（[issues.md](issues.md)参照）
 - [ ] `cr1yn`変数を追加したデータセット版の再送要否を確認（7/5回答では見送り）
 - [ ] Claude連携のBoxアップロード制限（共同作業者設定フォルダへの書き込み拒否）の回避方法を調査（ユーザー確認中）
+
+## 完了（2026-08-03）
+
+- [x] GitHubリポジトリをこのマシンへ新規クローン
+- [x] 観察期間中央値の算出方法（単純中央値法 vs 逆Kaplan-Meier法）を整理し、Box 2025年12月時点データで実データ検証（中央値3.64年/43.7か月、範囲0.02〜5.49年）
+- [x] 正式なSASプログラム`program/JALSG-GML219_Inquiry05_FollowUp.sas`を新規作成（未実行）
+- [x] 作業ログ`docs/work-logs/20260803-work-log.md`を作成
 
 ## 完了（2026-08-02）
 
