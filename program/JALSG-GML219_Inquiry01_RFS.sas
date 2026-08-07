@@ -18,7 +18,22 @@
 
 options nofmterr ls=160 ps=80 nodate nonumber missing=" ";
 
-%let root = C:\Users\AkikoSaito\Data\NMC\Stat\JALSG-GML219;
+%macro working_dir;
+    %local _fullpath _path;
+    %let   _fullpath = ;
+    %let   _path     = ;
+    %if %length(%sysfunc(getoption(sysin))) = 0 %then
+        %let _fullpath = %sysget(sas_execfilepath);
+    %else
+        %let _fullpath = %sysfunc(getoption(sysin));
+    %let _path = %substr(   &_fullpath., 1, %length(&_fullpath.)
+                          - %length(%scan(&_fullpath.,-1,'\'))
+                          - %length(%scan(&_fullpath.,-2,'\'))
+                          - 2 );
+    &_path.
+%mend working_dir;
+
+%let root = %working_dir;
 libname olda "&root.\input\ads\202512 data" access=readonly;
 
 proc printto log="&root.\log\JALSG-GML219_Inquiry01_RFS.log"

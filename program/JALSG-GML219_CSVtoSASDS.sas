@@ -22,7 +22,22 @@ ods listing;
 /*====================================================================================*/
 /* プロジェクトルートパスの定義（ここだけを環境に合わせて修正）                       */
 /*====================================================================================*/
-%let _root = C:/Users/AkikoSaito/Data/NMC/Stat/JALSG-GML219;
+%macro working_dir;
+    %local _fullpath _path;
+    %let   _fullpath = ;
+    %let   _path     = ;
+    %if %length(%sysfunc(getoption(sysin))) = 0 %then
+        %let _fullpath = %sysget(sas_execfilepath);
+    %else
+        %let _fullpath = %sysfunc(getoption(sysin));
+    %let _path = %substr(   &_fullpath., 1, %length(&_fullpath.)
+                          - %length(%scan(&_fullpath.,-1,'\'))
+                          - %length(%scan(&_fullpath.,-2,'\'))
+                          - 2 );
+    &_path.
+%mend working_dir;
+
+%let _root = %working_dir;
 
 /*====================================================================================*/
 /* ログファイル出力設定                                                               */
