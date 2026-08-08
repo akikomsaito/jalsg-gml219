@@ -8,10 +8,7 @@
 
 ## 直近
 
-- [ ] **`NMC-RINKEN15` で `%working_dir` 化した6本の SAS 実行検証を行う。** 書き換えは `311C4W991` で実施したが、同端末の clone には `input/`・`log/`・`output/` が無く実行できない。データが同居している RINKEN15 で pull し、Inquiry01〜04・CSVtoSASDS を実行して既存の成果物と（出力日を除いて）一致することを確認する。判断の経緯と移動安全性テストの結果は `akikomsaito/akiko-office` の `docs/gml219-relocation.md` が正本
-- [ ] **`program/JALSG-GML219_Inquiry05_FollowUp.sas` の文字コードを決める。** このファイルだけ **UTF-8（BOMなし）** で、他32本は **cp932**。Windows 日本語環境の SAS 9.4 は `.sas` を cp932 として読むため、**実行すると日本語コメントが化ける見込み**（2026-07-04 に修正した「AE24ラベルの文字化け」と同型）。cp932 へ揃えるか、`-encoding utf8` で実行する運用にするかを決める。**Inquiry05 の初回実行前に片付けること**
-- [ ] SAS環境で`program/JALSG-GML219_Inquiry05_FollowUp.sas`（追跡期間中央値、逆Kaplan-Meier法）を実行し、出力（`output\JALSG-GML219_Inquiry05_FollowUp.rtf`）の中央値・範囲がPython検証値（中央値3.64年/43.7か月、範囲0.02〜5.49年）と一致するか確認する
-- [ ] 確認後、逆Kaplan-Meier法による追跡期間中央値・範囲を研究代表医師への回答に反映する
+- [ ] 逆Kaplan-Meier法による追跡期間中央値・範囲（3.64年／43.7か月、範囲0.02〜5.49年）を研究代表医師への回答に反映する
 - [ ] `docs/ash2026-abstract-review.md` をGoogleドライブ「JALSG-GML219」フォルダへアップロード（Claude経由は権限不足で失敗。オーナー cutie.akiko@gmail.com 側で編集者権限を付与するか、手動アップロードが必要。[issues.md](issues.md)参照）
 - [ ] ASH抄録の修正提案メールを伊藤先生へ送付する（`TMF/20260802 ASH抄録レビュー/`に本文・別紙あり。同ファイルの「送信前の未確定事項」5点——著者所属のClinical Research Center有無、誤字1件、記号の不統一、GML200のpercentage points指摘の要否、主要10AE版数値の扱い——を解消してから送る）
 - [ ] 抄録の著者情報修正（Akiko M. Saito ／ Clinical Research Center, NHO Nagoya Medical Center、所属番号の新規割り当て）が投稿システム上で反映されたか確認
@@ -24,6 +21,9 @@
 ## 2026-08-08 完了
 
 - [x] `program/` 直下の絶対パス直書き6本（Inquiry01〜05・CSVtoSASDS）を `%working_dir` 方式へ書き換え、残りと揃えた。これで場所非依存になりフォルダ移動でパスが壊れない。`libname olda` は変更していない（旧データとの比較に関わるため）
+- [x] `Inquiry05_FollowUp.sas` を cp932 へ変換した（他24本と同じ）。往復検証で無損失を確認し、実行して日本語が正しく出ることも確かめた
+- [x] `NMC-RINKEN15` で書き換え6本の SAS 実行検証を完了。Inquiry01〜04 の `.lst` は出力日を正規化すると基準と完全一致、`.rtf` も `\creatim` と出力日を除くと完全一致、ERROR/WARNING 0件。CSVtoSASDS は `input/ads/gml219.csv` が SHA256 一致、`gml219`・`gml219_sae` の PROC COMPARE が `SYSINFO=0`、WARNING 3件は基準と同内容。経緯の正本は `akikomsaito/akiko-office` の `docs/gml219-relocation.md`
+- [x] Inquiry05 を初実行し、追跡期間中央値が Python 検証値（3.64年／43.7か月、範囲0.02〜5.49年）と一致することを確認した
 
 ## 2026-08-03 完了
 

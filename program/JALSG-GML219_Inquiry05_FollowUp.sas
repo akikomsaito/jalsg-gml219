@@ -4,19 +4,19 @@
 * Author        : Akiko Saito
 * Created       : 2026/08/03
 *
-* Purpose       : ç ”ç©¶ä»£è¡¨åŒ»å¸«ç…§ä¼š (5) è¿½è·¡æœŸé–“ä¸­å¤®å€¤ã®ç®—å‡º
+* Purpose       : Œ¤‹†‘ã•\ˆãtÆ‰ï (5) ’ÇÕŠúŠÔ’†‰›’l‚ÌZo
 *
-*   å˜ç´”ä¸­å¤®å€¤æ³•(å…¨ä¾‹ã®os_yã‚’ãã®ã¾ã¾ä¸­å¤®å€¤åŒ–)ã¯ã€æ­»äº¡ã—ãŸæ‚£è€…ã»ã©è¦³å¯ŸãŒ
-*   æ—©ãæ‰“ã¡åˆ‡ã‚‰ã‚Œã‚‹ãŸã‚ä¸‹æ–¹ãƒã‚¤ã‚¢ã‚¹ã‚’å—ã‘ã‚‹ã€‚æœ¬è©¦é¨“ã¯æ­»äº¡ã‚¤ãƒ™ãƒ³ãƒˆãŒ
-*   FAS121ä¾‹ä¸­66ä¾‹(ç´„5å‰²)ã¨å¤šãã€å˜ç´”æ³•ã§ã¯ä¸­å¤®å€¤ãŒå®Ÿéš›ã®è¿½è·¡æœŸé–“ã‚ˆã‚Š
-*   å¤§ããçŸ­ãå‡ºã‚‹ã€‚ã“ã®ãŸã‚ã€æ­»äº¡ã‚’æ‰“åˆ‡ã‚Šãƒ»ç”Ÿå­˜ã‚’ã€Œã‚¤ãƒ™ãƒ³ãƒˆã€ã¨ã—ã¦
-*   æŒ‡æ¨™ã‚’åè»¢ã™ã‚‹é€†Kaplan-Meieræ³•(Reverse KM, Schemper & Smith 1996)ã‚’
-*   æ¨™æº–æ³•ã¨ã—ã¦æ¡ç”¨ã—ã€ç¯„å›²(min-max)ã‚’ä½µè¨˜ã™ã‚‹ã€‚
+*   ’Pƒ’†‰›’l–@(‘S—á‚Ìos_y‚ğ‚»‚Ì‚Ü‚Ü’†‰›’l‰»)‚ÍA€–S‚µ‚½Š³Ò‚Ù‚ÇŠÏ@‚ª
+*   ‘‚­‘Å‚¿Ø‚ç‚ê‚é‚½‚ß‰º•ûƒoƒCƒAƒX‚ğó‚¯‚éB–{Œ±‚Í€–SƒCƒxƒ“ƒg‚ª
+*   FAS121—á’†66—á(–ñ5Š„)‚Æ‘½‚­A’Pƒ–@‚Å‚Í’†‰›’l‚ªÀÛ‚Ì’ÇÕŠúŠÔ‚æ‚è
+*   ‘å‚«‚­’Z‚­o‚éB‚±‚Ì‚½‚ßA€–S‚ğ‘ÅØ‚èE¶‘¶‚ğuƒCƒxƒ“ƒgv‚Æ‚µ‚Ä
+*   w•W‚ğ”½“]‚·‚é‹tKaplan-Meier–@(Reverse KM, Schemper & Smith 1996)‚ğ
+*   •W€–@‚Æ‚µ‚ÄÌ—p‚µA”ÍˆÍ(min-max)‚ğ•¹‹L‚·‚éB
 *
-* å¯¾è±¡          : FAS (n=121)
-* å…¥åŠ›          : input\ads\202512 data\gml219.sas7bdat
-* å‡ºåŠ›          : output\JALSG-GML219_Inquiry05_FollowUp.rtf
-* ãƒ­ã‚°          : log\JALSG-GML219_Inquiry05_FollowUp.log
+* ‘ÎÛ          : FAS (n=121)
+* “ü—Í          : input\ads\202512 data\gml219.sas7bdat
+* o—Í          : output\JALSG-GML219_Inquiry05_FollowUp.rtf
+* ƒƒO          : log\JALSG-GML219_Inquiry05_FollowUp.log
 ******************************************************************************/
 
 options nofmterr ls=160 ps=80 nodate nonumber missing=" ";
@@ -44,30 +44,30 @@ proc printto log="&root.\log\JALSG-GML219_Inquiry05_FollowUp.log"
 
 ods rtf file="&root.\output\JALSG-GML219_Inquiry05_FollowUp.rtf" style=listing bodytitle;
 ods escapechar='^';
-title  "JALSG-GML219 ç ”ç©¶ä»£è¡¨åŒ»å¸«ç…§ä¼šã¸ã®å›ç­”è³‡æ–™ (5) è¿½è·¡æœŸé–“ä¸­å¤®å€¤";
-title2 "å‡ºåŠ›æ—¥: %sysfunc(today(),yymmddn8.)";
+title  "JALSG-GML219 Œ¤‹†‘ã•\ˆãtÆ‰ï‚Ö‚Ì‰ñ“š‘—¿ (5) ’ÇÕŠúŠÔ’†‰›’l";
+title2 "o—Í“ú: %sysfunc(today(),yymmddn8.)";
 
 /*-----------------------------------------------------------------------------
-  STEP 1: è§£æå¯¾è±¡ãƒ‡ãƒ¼ã‚¿ã‚»ãƒƒãƒˆã®æ§‹ç¯‰ (FAS, é€†Kaplan-Meierç”¨ã‚¤ãƒ™ãƒ³ãƒˆæŒ‡æ¨™)
-    rev_c = 1 - OS_c : æ­»äº¡(OS_c=1)ã‚’æ‰“åˆ‡ã‚Šã€ç”Ÿå­˜(OS_c=0)ã‚’ã€Œã‚¤ãƒ™ãƒ³ãƒˆã€ã¨ã—ã¦åè»¢
+  STEP 1: ‰ğÍ‘ÎÛƒf[ƒ^ƒZƒbƒg‚Ì\’z (FAS, ‹tKaplan-Meier—pƒCƒxƒ“ƒgw•W)
+    rev_c = 1 - OS_c : €–S(OS_c=1)‚ğ‘ÅØ‚èA¶‘¶(OS_c=0)‚ğuƒCƒxƒ“ƒgv‚Æ‚µ‚Ä”½“]
 -----------------------------------------------------------------------------*/
 data ana;
     set olda.gml219;
     where FASFL = "Y";
     rev_c = 1 - OS_c;
-    label rev_c = "é€†Kaplan-Meierç”¨ã‚¤ãƒ™ãƒ³ãƒˆæŒ‡æ¨™ (1=ç”Ÿå­˜, 0=æ­»äº¡[æ‰“åˆ‡æ‰±ã„])";
+    label rev_c = "‹tKaplan-Meier—pƒCƒxƒ“ƒgw•W (1=¶‘¶, 0=€–S[‘ÅØˆµ‚¢])";
 run;
 
-title3 "(5-1) å¯¾è±¡é›†å›£ã®ç¢ºèª (FAS, n=121)";
+title3 "(5-1) ‘ÎÛW’c‚ÌŠm”F (FAS, n=121)";
 proc freq data=ana;
     tables OS_c*rev_c / list missing;
 run;
 
 /*-----------------------------------------------------------------------------
-  STEP 2: é€†Kaplan-Meieræ³•ã«ã‚ˆã‚‹è¿½è·¡æœŸé–“ä¸­å¤®å€¤ (å¹´ãƒ»æœˆ)
-    Quartile Estimatesãƒ†ãƒ¼ãƒ–ãƒ«ã®50%ç‚¹ã‚’ODS OUTPUTã§å–å¾—
+  STEP 2: ‹tKaplan-Meier–@‚É‚æ‚é’ÇÕŠúŠÔ’†‰›’l (”NEŒ)
+    Quartile Estimatesƒe[ƒuƒ‹‚Ì50%“_‚ğODS OUTPUT‚Åæ“¾
 -----------------------------------------------------------------------------*/
-title3 "(5-2) é€†Kaplan-Meieræ³• KMã‚«ãƒ¼ãƒ– (å¹´)";
+title3 "(5-2) ‹tKaplan-Meier–@ KMƒJ[ƒu (”N)";
 ods graphics on / width=18cm height=14cm imagename="Inquiry05_RevKM";
 proc lifetest data=ana plots=survival(cl) notable;
     time os_y*rev_c(0);
@@ -89,9 +89,9 @@ ods output close;
 ods select all;
 
 /*-----------------------------------------------------------------------------
-  STEP 3: è¦³å¯ŸæœŸé–“ã®ç¯„å›²ã€ãŠã‚ˆã³å˜ç´”ä¸­å¤®å€¤(å‚è€ƒå€¤)
+  STEP 3: ŠÏ@ŠúŠÔ‚Ì”ÍˆÍA‚¨‚æ‚Ñ’Pƒ’†‰›’l(Ql’l)
 -----------------------------------------------------------------------------*/
-title3 "(5-3) å‚è€ƒ: å˜ç´”ä¸­å¤®å€¤æ³•(å…¨ä¾‹ã®os_yã‚’ãã®ã¾ã¾ä¸­å¤®å€¤åŒ–)ã¨ã®æ¯”è¼ƒ";
+title3 "(5-3) Ql: ’Pƒ’†‰›’l–@(‘S—á‚Ìos_y‚ğ‚»‚Ì‚Ü‚Ü’†‰›’l‰»)‚Æ‚Ì”äŠr";
 proc means data=ana n median min max maxdec=4;
     var os_y os_m;
 run;
@@ -102,7 +102,7 @@ proc means data=ana noprint;
 run;
 
 /*-----------------------------------------------------------------------------
-  STEP 4: ã¾ã¨ã‚ (Tableå½¢å¼) - é€†Kaplan-Meieræ³•ã«ã‚ˆã‚‹ä¸­å¤®å€¤ã¨ç¯„å›²
+  STEP 4: ‚Ü‚Æ‚ß (TableŒ`®) - ‹tKaplan-Meier–@‚É‚æ‚é’†‰›’l‚Æ”ÍˆÍ
 -----------------------------------------------------------------------------*/
 data _med_y(keep=Estimate rename=(Estimate=median_y));
     set _km_y;
@@ -119,16 +119,16 @@ data followup_summary;
     if _n_ = 1 then set _med_m;
     if _n_ = 1 then set _rng;
     label
-        n_y      = "å¯¾è±¡ä¾‹æ•°(FAS)"
-        median_y = "è¿½è·¡æœŸé–“ä¸­å¤®å€¤(å¹´, é€†Kaplan-Meieræ³•)"
-        median_m = "è¿½è·¡æœŸé–“ä¸­å¤®å€¤(æœˆ, é€†Kaplan-Meieræ³•)"
-        min_y    = "è¦³å¯ŸæœŸé–“ æœ€å°å€¤(å¹´)"
-        max_y    = "è¦³å¯ŸæœŸé–“ æœ€å¤§å€¤(å¹´)"
-        min_m    = "è¦³å¯ŸæœŸé–“ æœ€å°å€¤(æœˆ)"
-        max_m    = "è¦³å¯ŸæœŸé–“ æœ€å¤§å€¤(æœˆ)";
+        n_y      = "‘ÎÛ—á”(FAS)"
+        median_y = "’ÇÕŠúŠÔ’†‰›’l(”N, ‹tKaplan-Meier–@)"
+        median_m = "’ÇÕŠúŠÔ’†‰›’l(Œ, ‹tKaplan-Meier–@)"
+        min_y    = "ŠÏ@ŠúŠÔ Å¬’l(”N)"
+        max_y    = "ŠÏ@ŠúŠÔ Å‘å’l(”N)"
+        min_m    = "ŠÏ@ŠúŠÔ Å¬’l(Œ)"
+        max_m    = "ŠÏ@ŠúŠÔ Å‘å’l(Œ)";
 run;
 
-title3 "(5-4) è¿½è·¡æœŸé–“ä¸­å¤®å€¤ã¨ç¯„å›² (FAS, é€†Kaplan-Meieræ³•)";
+title3 "(5-4) ’ÇÕŠúŠÔ’†‰›’l‚Æ”ÍˆÍ (FAS, ‹tKaplan-Meier–@)";
 title4;
 proc print data=followup_summary label noobs;
     var n_y median_y min_y max_y median_m min_m max_m;
@@ -138,4 +138,4 @@ run;
 ods rtf close;
 proc printto; run;
 
-%put NOTE: å‡ºåŠ› - &root.\output\JALSG-GML219_Inquiry05_FollowUp.rtf;
+%put NOTE: o—Í - &root.\output\JALSG-GML219_Inquiry05_FollowUp.rtf;
