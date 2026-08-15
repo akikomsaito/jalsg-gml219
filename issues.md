@@ -2,7 +2,7 @@
 
 随時更新（2026-08-02 時点）
 
-次アクションは [next-action.md](next-action.md) を参照。
+次アクションは [action-items.md](action-items.md) を参照。
 
 ---
 

@@ -69,7 +69,7 @@ PI（研究代表医師）より4件の照会を受け、追加解析を実施�
 
 ### 2026年7月4日 プロジェクト運用基盤の整備
 
-- stat-hubリポジトリの手順書に沿って、`CLAUDE.md`・`overview.md`・`issues.md`・`next-action.md`・`.claude/settings.json`等を整備し、GitHub/Boxの場所を記録。
+- stat-hubリポジトリの手順書に沿って、`CLAUDE.md`・`overview.md`・`issues.md`・`action-items.md`・`.claude/settings.json`等を整備し、GitHub/Boxの場所を記録。
 - 未コミットだった5月照会対応4プログラムをGitに取り込み。
 - ローカルに存在した新旧2つの作業フォルダ（現行`Data\NMC\Stat\JALSG-GML219`と旧`Data\JALSG-GML219`）およびBox・GitHubの内容を突き合わせて整理（[`20260704_フォルダ構成整理.md`](20260704_フォルダ構成整理.md)参照）。
   - 旧フォルダにしかなかった必要ファイル（rawdata 1件、2025年12月送付分の図表5件）を現行フォルダへ移動し、旧フォルダ（Git未コミット・未push）を削除。

@@ -1,6 +1,6 @@
 # JALSG-GML219 解析プロジェクト
 
-このフォルダは試験JALSG-GML219のSASプログラムと、この試験専用の作業記録（overview.md・issues.md・next-action.md）を管理する。
+このフォルダは試験JALSG-GML219のSASプログラムと、この試験専用の作業記録（overview.md・issues.md・action-items.md）を管理する。
 
 ## 厳守事項
 
@@ -8,13 +8,13 @@
 
 ## セッション開始時
 
-next-action.md を読んで直近の作業を確認する（フォルダを開くと自動で表示される設定済み）。
+action-items.md を読んで直近の作業を確認する（フォルダを開くと自動で表示される設定済み）。
 
 ## セッション終了時
 
 「セッションを終わります」と言われたら、次を行う。
 
-1. 今回の作業内容に合わせて overview.md・issues.md・next-action.md を更新する。
+1. 今回の作業内容に合わせて overview.md・issues.md・action-items.md を更新する。
 2. 変更をステージ・コミットし、push する。
 
 ## 関連

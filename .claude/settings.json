@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash \"${CLAUDE_PROJECT_DIR}/scripts/open-next-action.sh\""
+            "command": "bash \"${CLAUDE_PROJECT_DIR}/scripts/open-action-items.sh\""
           }
         ]
       }

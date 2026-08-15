@@ -2,16 +2,16 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "next-action.md を開く",
+      "label": "action-items.md を開く",
       "type": "shell",
       "command": "bash",
-      "args": ["${workspaceFolder}/scripts/open-next-action.sh"],
+      "args": ["${workspaceFolder}/scripts/open-action-items.sh"],
       "windows": {
         "command": "powershell",
         "args": [
           "-NoProfile",
           "-Command",
-          "Start-Process '${workspaceFolder}\\next-action.md'"
+          "Start-Process '${workspaceFolder}\\action-items.md'"
         ]
       },
       "presentation": {

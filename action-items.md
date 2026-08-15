@@ -41,7 +41,7 @@
 
 ## 初回セットアップ
 
-- [x] CLAUDE.md・overview.md・issues.md・next-action.md を作成する
+- [x] CLAUDE.md・overview.md・issues.md・action-items.md を作成する
 - [x] 齋藤（`tosh13`）の権限を確認する（nnh組織経由で既にadmin権限を保持していたため追加不要）
 - [x] Boxフォルダの場所を overview.md に記入する
 

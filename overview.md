@@ -24,4 +24,4 @@
 ## 関連
 
 - 既知の問題：[issues.md](issues.md)
-- 次アクション：[next-action.md](next-action.md)
+- 次アクション：[action-items.md](action-items.md)
